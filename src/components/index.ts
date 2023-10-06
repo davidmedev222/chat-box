@@ -1,0 +1,5 @@
+export { default as BackgroundImage } from './background/BackgroundImage'
+export { default as CallToAction } from './cta/CallToAction'
+export { default as Header } from './header/Header'
+export { default as LogoIcon } from './icons/LogoIcon'
+export { default as MenuIcon } from './icons/MenuIcon'

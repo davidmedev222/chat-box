@@ -1,8 +1,14 @@
+import { BackgroundImage, CallToAction, Header } from '@/components'
+
 function HomePage() {
   return (
-    <main>
-      <h1 className='text-8xl'>hello word</h1>
-    </main>
+    <>
+      <Header />
+      <main className='lg:grid lg:grid-cols-2'>
+        <CallToAction />
+        <BackgroundImage />
+      </main>
+    </>
   )
 }
 

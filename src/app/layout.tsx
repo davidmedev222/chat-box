@@ -1,4 +1,4 @@
-import './globals.css'
+import '../styles/globals.css'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +12,7 @@ interface Props {
 function RootLayout({ children }: Props) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body className='text-sm font-medium text-gray-500'>{children}</body>
     </html>
   )
 }
