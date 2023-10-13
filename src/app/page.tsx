@@ -1,14 +1,11 @@
-import { BackgroundImage, CallToAction, Header } from '@/components'
+import { BackgroundImage, CallToAction } from '@/components'
 
 function HomePage() {
   return (
-    <>
-      <Header />
-      <main className='lg:grid lg:grid-cols-2'>
-        <CallToAction />
-        <BackgroundImage />
-      </main>
-    </>
+    <main className='lg:grid lg:grid-cols-2'>
+      <CallToAction />
+      <BackgroundImage />
+    </main>
   )
 }
 

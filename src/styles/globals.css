@@ -9,4 +9,7 @@
   .clip-0 {
     clip-path: inset(0 0 0 0);
   }
+  .px-main {
+    @apply px-4 lg:px-16;
+  }
 }
