@@ -16,11 +16,11 @@ function HamburgerMenu({ isOpen, onClose }: Props) {
 
   const classes = {
     backdrop: clsx(
-      'pointer-events-none fixed left-0 top-0 h-full w-full overflow-auto transition-colors duration-300',
-      isOpen && 'pointer-events-auto bg-black/50'
+      'pointer-events-none fixed left-0 top-0 h-full w-full transition-colors duration-300',
+      isOpen && 'pointer-events-auto overflow-auto bg-black/50'
     ),
     menu: clsx(
-      'clip-right-0 transition-clip-path absolute right-0 top-0 flex min-h-screen flex-col gap-y-8 bg-white px-8 py-14 duration-150',
+      'clip-right-0 absolute right-0 top-0 flex min-h-screen flex-col gap-y-8 bg-white px-8 py-14 transition-clip-path duration-150',
       isOpen && 'clip-0'
     )
   }
@@ -34,7 +34,9 @@ function HamburgerMenu({ isOpen, onClose }: Props) {
         <ul className='mb-auto grid gap-y-8 text-base lg:text-sm'>
           {LinkRoutes.map((link) => (
             <li key={link.id}>
-              <Link href={link.href}>{link.title}</Link>
+              <Link href={link.href} onClick={onClose}>
+                {link.title}
+              </Link>
             </li>
           ))}
         </ul>

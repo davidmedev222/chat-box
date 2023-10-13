@@ -2,7 +2,7 @@ import { Button } from '@/components'
 
 function CallToAction() {
   return (
-    <section className='relative flex min-h-screen flex-col items-start justify-center gap-y-8 px-4 lg:px-16'>
+    <section className='px-main relative flex min-h-screen flex-col items-start justify-center gap-y-8'>
       <h1 className='text-5xl font-medium text-black lg:text-6xl'>
         Stay <span className='text-orange-400'>cool!</span> With Social Chat
       </h1>
