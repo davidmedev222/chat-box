@@ -13,7 +13,7 @@ interface Props {
 function RootLayout({ children }: Props) {
   return (
     <html lang='en'>
-      <body className='text-sm font-medium text-gray-500'>
+      <body className='text-sm text-black'>
         <Header />
         {children}
       </body>
