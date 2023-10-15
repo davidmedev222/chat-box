@@ -1,5 +1,5 @@
 import { Header } from '@/components'
-import '../styles/globals.css'
+import '../../styles/globals.css'
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,7 +10,7 @@ interface Props {
   children: React.ReactNode
 }
 
-function RootLayout({ children }: Props) {
+function LandingLayout({ children }: Props) {
   return (
     <html lang='en'>
       <body className='text-sm text-black'>
@@ -21,4 +21,4 @@ function RootLayout({ children }: Props) {
   )
 }
 
-export default RootLayout
+export default LandingLayout
