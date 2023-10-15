@@ -12,7 +12,7 @@ function FaqItem({ question, answer }: Props) {
   const [isOpen, toggleState] = useToggle(false)
   const classes = {
     question: clsx(
-      'flex cursor-pointer items-center justify-between gap-x-4 rounded-2xl border p-4 text-base font-medium',
+      'flex w-full cursor-pointer items-center justify-between gap-x-4 rounded-2xl border p-4 text-base font-medium',
       isOpen && 'border-orange-400'
     ),
     icon: clsx('h-4 w-4 rotate-45 transition-transform duration-300', isOpen && 'rotate-180'),
@@ -21,9 +21,9 @@ function FaqItem({ question, answer }: Props) {
 
   return (
     <li>
-      <div onClick={toggleState} className={classes.question}>
+      <button onClick={toggleState} className={classes.question}>
         {question} <CloseIcon className={classes.icon} />
-      </div>
+      </button>
       <p className={classes.answer}>{answer}</p>
     </li>
   )

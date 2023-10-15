@@ -1,5 +1,5 @@
-import { Button, CloseIcon, EmailIcon, GithubIcon, GoogleIcon } from '@/components'
-import { LinkRoutes } from '@/utils'
+import { Button, ButtonLink, CloseIcon, EmailIcon, GithubIcon, GoogleIcon } from '@/components'
+import { LinkRoutes, Routes } from '@/utils'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { MouseEvent } from 'react'
@@ -40,12 +40,14 @@ function HamburgerMenu({ isOpen, onClose }: Props) {
             </li>
           ))}
         </ul>
-        <Button variant='normal'>Create Account</Button>
+        <ButtonLink variant='normal' href={Routes.Register}>
+          Create Account
+        </ButtonLink>
         <p className='text-center'>Or log in with</p>
         <div className='grid gap-y-4'>
-          <Button variant='normal' iconLeft={<EmailIcon className='h-6 w-6 fill-white' />}>
+          <ButtonLink variant='normal' iconLeft={<EmailIcon className='h-6 w-6 fill-white' />} href={Routes.Login}>
             Continue with Email
-          </Button>
+          </ButtonLink>
           <Button variant='google' iconLeft={<GoogleIcon size={24} />}>
             Continue with Google
           </Button>

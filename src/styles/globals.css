@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  [type='text'],
+  input:where(:not([type])),
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  [multiple],
+  textarea,
+  select {
+    @apply rounded-2xl border px-6 py-4 focus:border-orange-400 focus:ring-orange-400;
+  }
+
+  [aria-invalid='true'] {
+    @apply ring-1 ring-red-600  focus:ring-red-600;
+  }
+
+  [type='checkbox'] {
+    @apply rounded-full p-3 text-orange-400 focus:ring-orange-400;
+  }
+}
+
 @layer utilities {
   .clip-right-0 {
     clip-path: inset(0 0 0 100%);

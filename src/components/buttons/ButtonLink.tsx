@@ -1,28 +1,27 @@
 import clsx from 'clsx'
+import Link, { LinkProps } from 'next/link'
 
-interface Props {
+interface Props extends LinkProps {
   children: React.ReactNode
   variant: 'normal' | 'google' | 'github'
   iconLeft?: JSX.Element
-  className?: string
 }
 
-function Button({ children, variant, iconLeft, className }: Props) {
+function ButtonLink({ children, variant, iconLeft, ...rest }: Props) {
   const classes = clsx(
-    'rounded-2xl px-12 py-4 text-base shadow-xl transition duration-300 hover:scale-105',
+    'rounded-2xl px-12 py-4 text-center text-base shadow-xl transition duration-300 hover:scale-105',
     variant === 'normal' && 'bg-black text-white hover:bg-black/70',
     variant === 'google' && 'bg-white text-black hover:bg-white/70',
     variant === 'github' && 'bg-black text-white hover:bg-black/70',
-    iconLeft && 'flex items-center gap-x-4',
-    className
+    iconLeft && 'flex items-center gap-x-4'
   )
 
   return (
-    <button className={classes}>
+    <Link {...rest} className={classes}>
       {iconLeft && iconLeft}
       {children}
-    </button>
+    </Link>
   )
 }
 
-export default Button
+export default ButtonLink
