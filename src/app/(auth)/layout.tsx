@@ -1,4 +1,7 @@
 import { BackgroundImage } from '@/components'
+import { Routes } from '@/utils'
+import { getServerSession } from 'next-auth'
+import { redirect } from 'next/navigation'
 import '../../styles/globals.css'
 import { LinkBack } from './components'
 
@@ -8,20 +11,19 @@ export const metadata = {
 }
 
 interface Props {
-  form: React.ReactNode
+  children: React.ReactNode
 }
 
-function AuthLayout({ form }: Props) {
+async function AuthLayout({ children }: Props) {
+  const session = await getServerSession()
+  if (session) redirect(Routes.Chatbox)
+
   return (
-    <html lang='en'>
-      <body className='text-sm text-black'>
-        <main className='lg:grid lg:grid-cols-2'>
-          <LinkBack />
-          <BackgroundImage />
-          {form}
-        </main>
-      </body>
-    </html>
+    <main className='lg:grid lg:grid-cols-2'>
+      <LinkBack />
+      <BackgroundImage />
+      {children}
+    </main>
   )
 }
 

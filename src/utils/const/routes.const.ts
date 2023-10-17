@@ -3,7 +3,8 @@ export const enum Routes {
   About = '/about',
   Services = '/services',
   Register = '/register',
-  Login = '/login'
+  Login = '/login',
+  Chatbox = '/chatbox'
 }
 
 export const LinkRoutes = [
