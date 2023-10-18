@@ -1,7 +1,7 @@
-import { Heading } from '@/components'
+import { Heading, SocialAuth } from '@/components'
 import { Routes } from '@/utils'
 import Link from 'next/link'
-import { SignInForm } from './components'
+import { AuthError } from '../components'
 
 function LoginPage() {
   return (
@@ -13,7 +13,8 @@ function LoginPage() {
         Welcome back to Chat Box. Sign in to continue your conversations, access your favorite groups and enjoy a unique
         chat experience.
       </p>
-      <SignInForm />
+      <AuthError />
+      <SocialAuth />
       <p className='space-x-2 text-base'>
         <span>Don't have an account?</span>
         <Link className='font-medium underline' href={Routes.Register}>
