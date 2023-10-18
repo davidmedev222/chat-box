@@ -1,4 +1,4 @@
-import { Button, ButtonLink, CloseIcon, EmailIcon, GithubIcon, GoogleIcon } from '@/components'
+import { ButtonLink, CloseIcon, SocialAuth } from '@/components'
 import { LinkRoutes, Routes } from '@/utils'
 import clsx from 'clsx'
 import Link from 'next/link'
@@ -44,17 +44,7 @@ function HamburgerMenu({ isOpen, onClose }: Props) {
           Create Account
         </ButtonLink>
         <p className='text-center'>Or log in with</p>
-        <div className='grid gap-y-4'>
-          <ButtonLink variant='normal' iconLeft={<EmailIcon className='h-6 w-6 fill-white' />} href={Routes.Login}>
-            Continue with Email
-          </ButtonLink>
-          <Button variant='google' iconLeft={<GoogleIcon size={24} />}>
-            Continue with Google
-          </Button>
-          <Button variant='github' iconLeft={<GithubIcon size={24} />}>
-            Continue with Github
-          </Button>
-        </div>
+        <SocialAuth />
       </div>
     </div>
   )

@@ -1,7 +1,6 @@
-import { Heading } from '@/components'
+import { Heading, SocialAuth } from '@/components'
 import { Routes } from '@/utils'
 import Link from 'next/link'
-import { SignUpForm } from './components'
 
 function RegisterPage() {
   return (
@@ -13,7 +12,7 @@ function RegisterPage() {
         Create your free account to enjoy all the features and benefits we offer. It's time to connect in a more
         meaningful way!
       </p>
-      <SignUpForm />
+      <SocialAuth />
       <p className='space-x-2 text-base'>
         <span>Already have an account?</span>
         <Link className='font-medium underline' href={Routes.Login}>

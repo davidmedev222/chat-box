@@ -1,4 +1,5 @@
-import { Button, Heading } from '@/components'
+import { ButtonLink, Heading } from '@/components'
+import { Routes } from '@/utils'
 
 function CallToAction() {
   return (
@@ -7,7 +8,9 @@ function CallToAction() {
         Stay <span className='text-orange-400'>cool!</span> With Social Chat
       </Heading>
       <p>Anyone willing to get acquainted and communicate can install it for free and use without limits.</p>
-      <Button variant='normal'>Try for free</Button>
+      <ButtonLink href={Routes.Chatbox} variant='normal'>
+        Try for free
+      </ButtonLink>
       <p className='absolute bottom-0 left-0 px-4 py-8 font-normal lg:px-16'>
         © 2023 by Chat Box. All rights received.
       </p>
