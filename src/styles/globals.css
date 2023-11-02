@@ -29,6 +29,25 @@
   [type='checkbox'] {
     @apply rounded-full p-3 text-orange-400 focus:ring-orange-400;
   }
+
+  /* CUSTOM SCROLL */
+  .scroll-orange {
+    --sb-track-color: theme(backgroundColor.transparent);
+    --sb-thumb-color: theme(backgroundColor.orange.400);
+    --sb-size: 3px;
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+  .scroll-orange::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+  .scroll-orange::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 8px;
+  }
+  .scroll-orange::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 8px;
+  }
 }
 
 @layer utilities {
