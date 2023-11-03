@@ -8,7 +8,7 @@ function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle()
 
   return (
-    <header className='fixed z-10 flex w-full items-center justify-between gap-x-16 p-4 lg:px-16 lg:py-8'>
+    <header className='fixed z-10 flex w-full items-center justify-between gap-x-16 bg-white p-4 lg:px-16 lg:py-8'>
       <Link href={Routes.Home}>
         <LogoIcon className='h-12 w-12' />
       </Link>

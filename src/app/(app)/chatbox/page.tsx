@@ -1,27 +1,20 @@
 'use client'
-
-import { Button } from '@/components'
-import { signOut, useSession } from 'next-auth/react'
-import Image from 'next/image'
+import { useState } from 'react'
+import { CallsSection, ChatsSection, StatusSection, Tab } from './components'
 
 function ChatboxPage() {
-  const { data: session, status } = useSession()
-
-  if (status === 'loading') {
-    return <div>Authenticating...</div>
-  }
+  const [tab, setTab] = useState(0)
+  const changeTab = (number: number) => () => setTab((state) => number)
 
   return (
-    <main>
-      <h1>Name : {session?.user?.name}</h1>
-      <h1>Email : {session?.user?.email}</h1>
-      <h1>ID : {session?.user.id}</h1>
-      <Image src={session?.user?.image ?? ''} alt='profile' width={200} height={200} />
-      <p>{JSON.stringify(session, null, 2)}</p>
-      <Button onClick={async () => await signOut()} variant='normal'>
-        Cerrar sesion
-      </Button>
-    </main>
+    <>
+      <Tab tab={tab} changeTab={changeTab} />
+      <main className='scroll-orange grid overflow-y-auto p-4'>
+        {tab === 0 && <ChatsSection />}
+        {tab === 1 && <StatusSection />}
+        {tab === 2 && <CallsSection />}
+      </main>
+    </>
   )
 }
 
