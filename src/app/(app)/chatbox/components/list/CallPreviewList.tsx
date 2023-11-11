@@ -1,99 +1,19 @@
 import Link from 'next/link'
+import { Routes } from '../../utils/const'
 import { UserCallPreview } from '../index'
+
+const users = Array.from({ length: 13 })
 
 function CallPreviewList() {
   return (
-    <ul className='grid gap-y-4'>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
-      <li>
-        <Link href='#'>
-          <UserCallPreview />
-        </Link>
-      </li>
+    <ul>
+      {users.map((_, i) => (
+        <li key={i}>
+          <Link href={`${Routes.CallInfo}/${i}`}>
+            <UserCallPreview />
+          </Link>
+        </li>
+      ))}
     </ul>
   )
 }

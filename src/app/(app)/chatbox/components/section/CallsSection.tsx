@@ -1,3 +1,4 @@
+import { Routes } from '@/chatbox/utils/const'
 import { CallPreviewList, Widget } from '../index'
 
 function CallsSection() {
@@ -15,7 +16,7 @@ function CallsSection() {
   return (
     <section>
       <CallPreviewList />
-      <Widget icon='call' position='one' />
+      <Widget href={Routes.NewCall} icon='call' position='one' />
     </section>
   )
 }
