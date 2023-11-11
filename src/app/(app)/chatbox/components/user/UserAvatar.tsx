@@ -15,9 +15,10 @@ function UserAvatar({ badge, border, size = 48, className }: Props) {
       'relative',
       border && 'rounded-full outline outline-orange-400',
       badge === 'status' &&
-        'before:absolute before:bottom-0 before:right-0 before:block before:h-3 before:w-3 before:rounded-full before:bg-orange-400 before:outline before:outline-white'
+        'before:absolute before:bottom-0 before:right-0 before:block before:h-3 before:w-3 before:rounded-full before:bg-orange-400 before:outline before:outline-white',
+      className
     ),
-    image: clsx('h-12 w-12 rounded-full object-cover', className)
+    image: clsx('h-12 w-12 rounded-full object-cover')
   }
 
   return (

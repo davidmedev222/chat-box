@@ -1,9 +1,10 @@
+import { ArrowBackIcon } from '@/components'
 import clsx from 'clsx'
 import Link, { LinkProps } from 'next/link'
 import { CallIcon, CameraIcon, EditIcon, MessageIcon } from '../index'
 
 interface Props extends LinkProps {
-  icon: 'message' | 'call' | 'edit' | 'camera' | 'arrow' | 'check'
+  icon: 'message' | 'call' | 'edit' | 'camera' | 'arrow' | 'check' | 'next'
   position: 'one' | 'two'
 }
 
@@ -20,6 +21,7 @@ function Widget({ icon, position, ...rest }: Props) {
       {icon === 'camera' && <CameraIcon className='fill-white' />}
       {icon === 'edit' && <EditIcon />}
       {icon === 'call' && <CallIcon className='h-6 w-6 fill-white' />}
+      {icon === 'next' && <ArrowBackIcon className='h-6 w-6 rotate-180 fill-white' />}
     </Link>
   )
 }

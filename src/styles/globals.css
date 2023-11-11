@@ -39,6 +39,7 @@
   }
   .scroll-orange::-webkit-scrollbar {
     width: var(--sb-size);
+    height: var(--sb-size);
   }
   .scroll-orange::-webkit-scrollbar-track {
     background: var(--sb-track-color);
