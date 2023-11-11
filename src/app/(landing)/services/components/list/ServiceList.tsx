@@ -1,4 +1,5 @@
-import { AdvancedQueryIcon, FolderIcon, PersonGroupIcon, PhoneTalkIcon, RecordVoiceIcon, TuneIcon } from '../index'
+import { PersonGroupIcon } from '@/components'
+import { AdvancedQueryIcon, FolderIcon, PhoneTalkIcon, RecordVoiceIcon, TuneIcon } from '../index'
 
 function ServiceList() {
   return (

@@ -8,7 +8,7 @@ interface Props {
 function RootLayout({ children }: Props) {
   return (
     <html lang='en'>
-      <body className='text-sm text-black'>
+      <body className='scroll-orange text-sm text-black'>
         <Providers>{children}</Providers>
       </body>
     </html>

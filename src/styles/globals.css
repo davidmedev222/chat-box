@@ -19,7 +19,7 @@
   [multiple],
   textarea,
   select {
-    @apply rounded-2xl border px-6 py-4 focus:border-orange-400 focus:ring-orange-400;
+    @apply w-full rounded-2xl border-none bg-transparent text-sm text-black placeholder:text-gray-400 focus:ring-0;
   }
 
   [aria-invalid='true'] {

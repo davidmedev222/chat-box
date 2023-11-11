@@ -1,62 +1,72 @@
 import { Routes } from '@/chatbox/utils/const'
 import Link from 'next/link'
-import { UserChatPreview } from '../index'
+import { UserContactPreview } from '../index'
 
-function ChatPreviewList() {
+function UserPreviewList() {
   return (
     <ul>
       <li>
         <Link href={`${Routes.Chats}/1`}>
-          <UserChatPreview />
+          <UserContactPreview />
         </Link>
       </li>
       <li>
         <Link href={`${Routes.Chats}/2`}>
-          <UserChatPreview />
+          <UserContactPreview />
         </Link>
       </li>
       <li>
         <Link href={`${Routes.Chats}/3`}>
-          <UserChatPreview />
+          <UserContactPreview />
         </Link>
       </li>
       <li>
         <Link href={`${Routes.Chats}/4`}>
-          <UserChatPreview />
+          <UserContactPreview />
         </Link>
       </li>
       <li>
         <Link href={`${Routes.Chats}/5`}>
-          <UserChatPreview />
+          <UserContactPreview />
         </Link>
       </li>
       <li>
         <Link href={`${Routes.Chats}/6`}>
-          <UserChatPreview />
+          <UserContactPreview />
         </Link>
       </li>
       <li>
         <Link href={`${Routes.Chats}/7`}>
-          <UserChatPreview />
+          <UserContactPreview />
         </Link>
       </li>
       <li>
         <Link href={`${Routes.Chats}/8`}>
-          <UserChatPreview />
+          <UserContactPreview />
         </Link>
       </li>
       <li>
         <Link href={`${Routes.Chats}/9`}>
-          <UserChatPreview />
+          <UserContactPreview />
         </Link>
       </li>
       <li>
         <Link href={`${Routes.Chats}/10`}>
-          <UserChatPreview />
+          <UserContactPreview />
+        </Link>
+      </li>
+      <li>
+        <Link href={`${Routes.Chats}/11`}>
+          <UserContactPreview />
+        </Link>
+      </li>
+      <li>
+        <Link href={`${Routes.Chats}/12`}>
+          <UserContactPreview />
         </Link>
       </li>
     </ul>
   )
 }
 
-export default ChatPreviewList
+export default UserPreviewList
