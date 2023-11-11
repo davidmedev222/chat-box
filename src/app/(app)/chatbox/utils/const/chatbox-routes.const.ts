@@ -4,8 +4,6 @@ export const enum Routes {
   Search = '/chatbox/search',
   NewGroup = '/chatbox/new-group',
   StarredMessages = '/chatbox/starred-messages',
-  ViewStatus = '/chatbox/status/view-status',
-  CreateStatus = '/chatbox/status/create-status',
   NewCall = '/chatbox/calls/new-call',
   CallInfo = '/chatbox/calls/call-info',
   Settings = '/chatbox/settings',
