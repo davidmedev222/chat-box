@@ -1,6 +1,10 @@
-import { DoneAllIcon } from '../index'
+import { DoneAllIcon, StarIcon } from '../index'
 
-function ChatMessageCard() {
+interface Props {
+  type: 'starred' | 'done'
+}
+
+function ChatMessageCard({ type }: Props) {
   return (
     <article className='grid max-w-screen-md grid-cols-[1fr_auto] items-center gap-2 rounded-2xl bg-orange-400 p-4 text-base text-white'>
       <p>
@@ -10,7 +14,8 @@ function ChatMessageCard() {
       </p>
       <div className='flex items-center gap-1 self-end'>
         <small>09:41</small>
-        <DoneAllIcon className='h-3.5 w-3.5 fill-current' />
+        {type === 'starred' && <StarIcon className='h-3.5 w-3.5 fill-current' />}
+        {type === 'done' && <DoneAllIcon className='h-3.5 w-3.5 fill-current' />}
       </div>
     </article>
   )
