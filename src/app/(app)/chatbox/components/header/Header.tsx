@@ -23,9 +23,9 @@ function Header() {
         <SmileIcon className='fill-current' />
         Chatbox
       </Link>
-      <button>
+      <Link href={ChatboxRoutes.Search}>
         <SearchIcon className='fill-current' />
-      </button>
+      </Link>
       <button onClick={toggleShowOptionsMore} className='relative'>
         <OptionsMoreIcon className='fill-current' />
         {showOptionsMore && (

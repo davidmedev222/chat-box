@@ -10,7 +10,7 @@ function ChatMessageCard() {
       </p>
       <div className='flex items-center gap-1 self-end'>
         <small>09:41</small>
-        <DoneAllIcon />
+        <DoneAllIcon className='h-3.5 w-3.5 fill-current' />
       </div>
     </article>
   )
