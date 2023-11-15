@@ -1,3 +1,4 @@
+import { Routes } from '@/chatbox/utils/const'
 import { ArchivedChatPreview, ChatPreviewList, Widget } from '../index'
 
 function ChatsSection() {
@@ -13,10 +14,10 @@ function ChatsSection() {
   // }
 
   return (
-    <section className='grid gap-y-4'>
+    <section>
       <ArchivedChatPreview />
       <ChatPreviewList />
-      <Widget icon='message' position='one' />
+      <Widget href={Routes.NewChat} icon='message' position='one' />
     </section>
   )
 }
