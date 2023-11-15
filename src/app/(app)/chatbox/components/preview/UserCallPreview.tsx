@@ -4,7 +4,7 @@ import { CallIcon, UserAvatar } from '../index'
 function UserCallPreview() {
   return (
     <article className='grid grid-cols-[auto_1fr_auto] items-center gap-x-4 px-4 py-2 hover:bg-gray-100'>
-      <UserAvatar />
+      <UserAvatar src='/assets/about.webp' />
       <div className='grid'>
         <p className='line-clamp-1 text-base font-medium'>Elmer Lavertly</p>
         <div className='grid grid-cols-[auto_1fr] items-center gap-x-1'>

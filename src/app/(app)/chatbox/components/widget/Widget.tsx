@@ -19,7 +19,7 @@ function Widget({ icon, position, ...rest }: Props) {
     <Link className={classes} {...rest}>
       {icon === 'message' && <MessageIcon className='fill-white' />}
       {icon === 'camera' && <CameraIcon className='fill-white' />}
-      {icon === 'edit' && <EditIcon />}
+      {icon === 'edit' && <EditIcon className='fill-white' />}
       {icon === 'call' && <CallIcon className='h-6 w-6 fill-white' />}
       {icon === 'next' && <ArrowBackIcon className='h-6 w-6 rotate-180 fill-white' />}
     </Link>

@@ -31,17 +31,17 @@ function Header() {
         {showOptionsMore && (
           <OptionsDropdown>
             <OptionDropwdown>
-              <Link className='grid grid-cols-[auto_1fr] items-center gap-x-4' href={ChatboxRoutes.NewGroup}>
+              <Link className='option-dropdown' href={ChatboxRoutes.NewGroup}>
                 <PersonGroupIcon className='h-6 w-6 fill-current' /> New Group
               </Link>
             </OptionDropwdown>
             <OptionDropwdown>
-              <Link className='grid grid-cols-[auto_1fr] items-center gap-x-4' href={ChatboxRoutes.StarredMessages}>
+              <Link className='option-dropdown' href={ChatboxRoutes.StarredMessages}>
                 <StarIcon className='fill-current' /> Starred Messages
               </Link>
             </OptionDropwdown>
             <OptionDropwdown>
-              <Link className='grid grid-cols-[auto_1fr] items-center gap-x-4' href={ChatboxRoutes.Settings}>
+              <Link className='option-dropdown' href={ChatboxRoutes.Settings}>
                 <SettingIcon className='fill-current' /> Settings
               </Link>
             </OptionDropwdown>

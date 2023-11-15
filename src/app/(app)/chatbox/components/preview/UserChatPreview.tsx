@@ -3,7 +3,7 @@ import { UserAvatar } from '../index'
 function UserChatPreview() {
   return (
     <article className='grid grid-cols-[auto_1fr_auto] items-center gap-x-4 px-4 py-2 hover:bg-gray-100'>
-      <UserAvatar badge='status' />
+      <UserAvatar src='/assets/about.webp' badge='status' />
       <div className='grid'>
         <p className='line-clamp-1 text-base font-medium'>Jenny Wilson</p>
         <p className='line-clamp-1 text-gray-500'>Can't wait to try it out! 🦆🦆</p>

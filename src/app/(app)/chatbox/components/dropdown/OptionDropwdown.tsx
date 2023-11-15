@@ -1,9 +1,10 @@
 interface Props {
   children: React.ReactNode
+  className?: string
 }
 
-function OptionDropwdown({ children }: Props) {
-  return <li className='grid grid-cols-[auto_1fr] items-center gap-x-4 py-4'>{children}</li>
+function OptionDropwdown({ children, className }: Props) {
+  return <li className={className}>{children}</li>
 }
 
 export default OptionDropwdown

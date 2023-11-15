@@ -23,10 +23,10 @@ function CallInfoPage() {
           <OptionsMoreIcon className='fill-current' />
           {showOptionsMore && (
             <OptionsDropdown>
-              <OptionDropwdown>
+              <OptionDropwdown className='option-dropdown'>
                 <TrashIcon className='fill-current' /> Remove from Call Log
               </OptionDropwdown>
-              <OptionDropwdown>
+              <OptionDropwdown className='option-dropdown'>
                 <BlockIcon className='fill-current' /> Block
               </OptionDropwdown>
             </OptionsDropdown>

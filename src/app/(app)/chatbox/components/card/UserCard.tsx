@@ -8,7 +8,7 @@ function UserCard() {
 
   return (
     <article className='grid grid-cols-[auto_1fr] items-center gap-x-4 px-4 py-2'>
-      <UserAvatar className='h-16 w-16' size={64} />
+      <UserAvatar src={user?.image ?? '/assets/user-default.webp'} priority className='h-16 w-16' size={64} />
       <header className='grid text-xl font-medium'>
         <p className='line-clamp-1'>{user?.name}</p>
         <p className='line-clamp-1 text-sm text-gray-600'>{user?.email}</p>

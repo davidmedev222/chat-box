@@ -30,13 +30,13 @@ function NewCallPage() {
           <OptionsMoreIcon className='fill-current' />
           {showOptionsMore && (
             <OptionsDropdown>
-              <OptionDropwdown>
+              <OptionDropwdown className='option-dropdown'>
                 <PersonAddIcon className='fill-current' /> Invite a friend
               </OptionDropwdown>
-              <OptionDropwdown>
+              <OptionDropwdown className='option-dropdown'>
                 <PersonGroupIcon className='h-6 w-6 fill-current' /> Contacts
               </OptionDropwdown>
-              <OptionDropwdown>
+              <OptionDropwdown className='option-dropdown'>
                 <InfoIcon className='h-6 w-6 fill-current' /> Help
               </OptionDropwdown>
             </OptionsDropdown>

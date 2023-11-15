@@ -14,28 +14,28 @@ import {
 function ChatOptionList() {
   return (
     <OptionsDropdown>
-      <OptionDropwdown>
+      <OptionDropwdown className='option-dropdown'>
         <SearchIcon className='h-6 w-6 fill-current' /> Search
       </OptionDropwdown>
-      <OptionDropwdown>
+      <OptionDropwdown className='option-dropdown'>
         <NotificationIcon className='fill-current' /> Mute Notification
       </OptionDropwdown>
-      <OptionDropwdown>
+      <OptionDropwdown className='option-dropdown'>
         <ScheduleIcon className='fill-current' /> Disappearing Messages
       </OptionDropwdown>
-      <OptionDropwdown>
+      <OptionDropwdown className='option-dropdown'>
         <WallpaperIcon className='fill-current' /> Wallpaper
       </OptionDropwdown>
-      <OptionDropwdown>
+      <OptionDropwdown className='option-dropdown'>
         <InfoIcon className='h-6 w-6 fill-current' /> Report
       </OptionDropwdown>
-      <OptionDropwdown>
+      <OptionDropwdown className='option-dropdown'>
         <BlockIcon className='fill-current' /> Block
       </OptionDropwdown>
-      <OptionDropwdown>
+      <OptionDropwdown className='option-dropdown'>
         <TrashIcon className='fill-current' /> Clear Chat
       </OptionDropwdown>
-      <OptionDropwdown>
+      <OptionDropwdown className='option-dropdown'>
         <ExportIcon className='fill-current' /> Export Chat
       </OptionDropwdown>
     </OptionsDropdown>

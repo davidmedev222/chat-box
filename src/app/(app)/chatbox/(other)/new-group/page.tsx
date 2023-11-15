@@ -14,7 +14,7 @@ function NewGroupPage() {
         <p className='font-medium text-black/70'>44 of 1152 selected</p>
         <footer className='scroll-orange flex snap-x snap-mandatory gap-x-2 overflow-x-scroll py-1'>
           {userSelected.map((_, i) => (
-            <UserAvatar key={i} className='shrink-0 snap-start' />
+            <UserAvatar key={i} src='/assets/about.webp' className='shrink-0 snap-start' />
           ))}
         </footer>
       </article>
