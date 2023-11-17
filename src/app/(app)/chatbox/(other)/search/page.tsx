@@ -19,7 +19,7 @@ function SearchPage() {
         <button onClick={() => router.back()}>
           <ArrowBackIcon className='h-6 w-6 fill-current' />
         </button>
-        <form className='grid grow grid-cols-[auto_1fr] items-center gap-x-2 rounded-2xl bg-gray-100 px-4 py-2 text-gray-400 focus-within:text-orange-400 focus-within:ring-1 focus-within:ring-orange-400'>
+        <form className='grid grow grid-cols-[auto_1fr] items-center gap-x-2 rounded-2xl bg-gray-50 px-4 py-2 text-gray-400 focus-within:text-orange-400 focus-within:ring-1 focus-within:ring-orange-400 dark:bg-gray-950'>
           <SearchIcon className='h-6 w-6 fill-current' />
           <input type='search' placeholder='Type a search' />
         </form>

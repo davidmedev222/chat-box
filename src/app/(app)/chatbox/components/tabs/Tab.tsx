@@ -9,7 +9,7 @@ function Tab({ tab, changeTab }: Props) {
   const classes = {
     tab: clsx('grid grid-cols-3 bg-orange-400 px-4 text-center font-medium'),
     active: clsx(
-      'w-full border-b-2 border-transparent p-4 text-gray-200 data-[tab-active=true]:border-white data-[tab-active=true]:text-white'
+      'w-full border-b-[3px] border-transparent p-4 text-gray-200 data-[tab-active=true]:border-white data-[tab-active=true]:text-white'
     ),
     badge: clsx('rounded-full bg-white px-1 py-0.5 text-xs text-orange-400')
   }

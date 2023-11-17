@@ -14,20 +14,26 @@ import { ArrowBackIcon, Button, InfoIcon, PersonGroupIcon } from '@/components'
 import { useToggle } from '@/hooks'
 import clsx from 'clsx'
 import { signOut } from 'next-auth/react'
+import { useTheme } from 'next-themes'
 import Link from 'next/link'
 
 function OptionList() {
   const [showLogout, toggleShowLogout] = useToggle(false)
+  const { theme, setTheme } = useTheme()
+  const onToggleTheme = () => {
+    const isDarkMode = theme === 'dark' ? 'light' : 'dark'
+    setTheme(isDarkMode)
+  }
 
   const classes = {
     bottomsheet: clsx(
-      'fixed -bottom-full grid w-full justify-items-center gap-y-6 rounded-t-2xl border-t border-gray-200 bg-white px-4 py-8 transition-position duration-300',
+      'fixed -bottom-full grid w-full justify-items-center gap-y-6 rounded-t-2xl border-t border-gray-200 bg-white px-4 py-8 transition-position duration-300 dark:border-gray-800 dark:bg-black/90',
       showLogout && '!bottom-0'
     )
   }
 
   return (
-    <ul className='font-medium text-black'>
+    <ul className='font-medium'>
       <li>
         <Link href={Routes.SettingsAccount} className='option-dropdown'>
           <PersonIcon className='fill-current' /> Account
@@ -61,7 +67,7 @@ function OptionList() {
       <li>
         <button className='option-dropdown w-full'>
           <DarkModeIcon className='fill-current' /> Dark Mode
-          <Switch />
+          <Switch onClick={onToggleTheme} checked={theme === 'dark'} />
         </button>
       </li>
       <li>
@@ -81,7 +87,7 @@ function OptionList() {
           <LogoutIcon className='fill-current' /> Logout
         </button>
         <div className={classes.bottomsheet}>
-          <span className='text-xl font-medium text-red-400'>Logout</span>
+          <span className='text-xl font-medium text-red-500'>Logout</span>
           <p className='text-base font-medium'>Are you sure you want to log out?</p>
           <div className='grid gap-2 justify-self-stretch min-[426px]:mx-auto min-[426px]:grid-cols-2'>
             <Button onClick={toggleShowLogout} variant='normal'>

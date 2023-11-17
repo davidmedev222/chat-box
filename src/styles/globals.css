@@ -19,7 +19,7 @@
   [multiple],
   textarea,
   select {
-    @apply w-full rounded-2xl border-none bg-transparent text-sm text-black placeholder:text-gray-400 focus:ring-0;
+    @apply w-full rounded-2xl border-none bg-transparent text-sm text-black placeholder:text-gray-400 focus:ring-0 dark:text-white;
   }
 
   [aria-invalid='true'] {
@@ -53,11 +53,11 @@
 
 @layer components {
   .options-dropdown {
-    @apply absolute right-0 top-[calc(100%+8px)] w-max divide-y  bg-white font-medium text-black shadow-xl;
+    @apply absolute right-0 top-[calc(100%+8px)] w-max divide-y  bg-white font-medium text-black shadow-xl dark:bg-black/90 dark:text-white;
   }
 
   .option-dropdown {
-    @apply grid grid-cols-[auto_1fr_auto] items-center gap-x-4 px-4 py-3 text-left hover:bg-gray-100;
+    @apply grid grid-cols-[auto_1fr_auto] items-center gap-x-4 px-4 py-3 text-left hover:bg-gray-100 dark:hover:bg-gray-600;
   }
 }
 

@@ -13,7 +13,7 @@ function Header() {
   const [isMenuOpen, toggleMenuOpen] = useToggle()
   const classes = clsx(
     'fixed z-10 flex w-full items-center justify-between gap-x-16 p-4 lg:px-16 lg:py-8',
-    scrolling && 'bg-white'
+    scrolling && 'bg-white dark:bg-black/90'
   )
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function Header() {
   return (
     <header className={classes}>
       <Link href={Routes.Home}>
-        <LogoIcon className='h-12 w-12' />
+        <LogoIcon className='h-12 w-12 fill-current' />
       </Link>
       <nav className='hidden lg:block'>
         <ul className='flex items-center gap-x-16'>
@@ -41,7 +41,7 @@ function Header() {
         </ul>
       </nav>
       <button onClick={toggleMenuOpen} className='ml-auto'>
-        <MenuIcon className='h-12 w-12' />
+        <MenuIcon className='h-12 w-12 fill-current' />
       </button>
       <HamburgerMenu isOpen={isMenuOpen} onClose={toggleMenuOpen} />
     </header>
