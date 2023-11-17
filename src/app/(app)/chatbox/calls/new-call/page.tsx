@@ -1,5 +1,6 @@
 'use client'
 import {
+  ButtonLink,
   CallIcon,
   OptionDropwdown,
   OptionsDropdown,
@@ -43,6 +44,12 @@ function NewCallPage() {
           )}
         </button>
       </PageHeader>
+      <ButtonLink href='#' icon={<PersonGroupIcon className='h-6 w-6 fill-white' />}>
+        New Group Call
+      </ButtonLink>
+      <ButtonLink href='#' icon={<PersonAddIcon className='fill-white' />}>
+        New Contact
+      </ButtonLink>
       <ul>
         {users.map((_, i) => (
           <li key={i}>

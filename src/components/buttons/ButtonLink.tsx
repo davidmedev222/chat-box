@@ -11,7 +11,7 @@ interface Props extends LinkProps {
 function ButtonLink({ children, variant, iconLeft, ...rest }: Props) {
   const classes = clsx(
     'rounded-2xl px-12 py-4 text-center text-base shadow-xl transition duration-300 hover:scale-105',
-    variant === 'normal' && 'bg-black text-white hover:bg-black/70',
+    variant === 'normal' && 'bg-black text-white hover:bg-black/70 dark:bg-gray-600',
     variant === 'google' && 'bg-white text-black hover:bg-white/70',
     variant === 'github' && 'bg-black text-white hover:bg-black/70',
     iconLeft && 'flex items-center gap-x-4'

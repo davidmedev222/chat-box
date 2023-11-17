@@ -8,7 +8,7 @@ interface Props {
 function StatusPreviewList({ title }: Props) {
   return (
     <ul>
-      <li className='px-4 py-2 font-medium text-gray-600'>{title}</li>
+      <li className='px-4 py-2 font-medium text-gray-600 dark:text-gray-400'>{title}</li>
       <li>
         <Link href='#'>
           <UserStatusPreview />

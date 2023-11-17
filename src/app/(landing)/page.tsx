@@ -4,7 +4,7 @@ function HomePage() {
   return (
     <main className='lg:grid lg:grid-cols-2'>
       <CallToAction />
-      <BackgroundImage />
+      <BackgroundImage priority />
     </main>
   )
 }

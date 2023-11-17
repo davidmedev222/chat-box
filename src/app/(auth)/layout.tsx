@@ -21,7 +21,7 @@ async function AuthLayout({ children }: Props) {
   return (
     <main className='lg:grid lg:grid-cols-2'>
       <LinkBack />
-      <BackgroundImage />
+      <BackgroundImage priority />
       {children}
     </main>
   )

@@ -10,7 +10,7 @@ function AuthError() {
 
   return (
     hasError && (
-      <div className='grid grid-cols-[auto_1fr] items-center justify-center gap-x-2 rounded-2xl bg-red-400 px-12 py-4 text-base text-white shadow-xl'>
+      <div className='grid grid-cols-[auto_1fr] items-center justify-center gap-x-2 rounded-2xl bg-red-500 px-12 py-4 text-base text-white shadow-xl'>
         <InfoIcon className='fill-current' />
         <p>{ERROR_CODES[error] ?? ERROR_CODES.Default}</p>
       </div>

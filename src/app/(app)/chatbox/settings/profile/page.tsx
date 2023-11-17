@@ -17,8 +17,18 @@ function ProfilePage() {
         priority
       />
       <form className='mx-auto grid w-full max-w-md gap-y-2 px-4 py-2'>
-        <input className='bg-gray-100 placeholder:text-black' disabled type='text' placeholder={user?.name ?? ''} />
-        <input className='bg-gray-100 placeholder:text-black' disabled type='email' placeholder={user?.email ?? ''} />
+        <input
+          className='bg-gray-100 placeholder:text-black dark:bg-gray-900 dark:placeholder:text-white'
+          disabled
+          type='text'
+          placeholder={user?.name ?? ''}
+        />
+        <input
+          className='bg-gray-100 placeholder:text-black dark:bg-gray-900 dark:placeholder:text-white'
+          disabled
+          type='email'
+          placeholder={user?.email ?? ''}
+        />
       </form>
     </div>
   )

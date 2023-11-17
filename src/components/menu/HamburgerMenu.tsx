@@ -20,7 +20,7 @@ function HamburgerMenu({ isOpen, onClose }: Props) {
       isOpen && 'pointer-events-auto overflow-auto bg-black/50'
     ),
     menu: clsx(
-      'clip-right-0 absolute right-0 top-0 flex min-h-screen flex-col gap-y-8 bg-white px-8 py-14 transition-clip-path duration-150',
+      'clip-right-0 absolute right-0 top-0 flex min-h-screen flex-col gap-y-8 bg-white px-8 py-14 transition-clip-path duration-150 dark:bg-black/90',
       isOpen && 'clip-0'
     )
   }
@@ -29,7 +29,7 @@ function HamburgerMenu({ isOpen, onClose }: Props) {
     <div onClick={handleOnClose} className={classes.backdrop}>
       <div className={classes.menu}>
         <button onClick={onClose} className='absolute right-0 top-0 mx-8 mt-2'>
-          <CloseIcon className='h-10 w-10' />
+          <CloseIcon className='h-10 w-10 fill-current' />
         </button>
         <ul className='mb-auto grid gap-y-8 text-base lg:text-sm'>
           {LinkRoutes.map((link) => (
