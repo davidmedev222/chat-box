@@ -6,14 +6,14 @@ interface Props {
 
 function BackgroundImage({ priority }: Props) {
   return (
-    <div className='relative hidden bg-[#f0ece9] lg:block'>
+    <div className='hidden max-h-screen bg-[#f0ece9] lg:block'>
       <Image
         src='/assets/banner-chatbox.webp'
-        className='object-cover object-top'
+        className='h-full w-full object-contain object-bottom'
         quality={100}
+        width={425}
+        height={588}
         priority={priority}
-        fill
-        sizes='100vw'
         alt='Image of an arm with a cell phone and chat stickers'
       />
     </div>

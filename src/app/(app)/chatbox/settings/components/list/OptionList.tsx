@@ -21,7 +21,7 @@ function OptionList() {
 
   const classes = {
     bottomsheet: clsx(
-      'transition-position absolute -bottom-full grid w-full justify-items-center gap-y-6 rounded-t-2xl border-t border-gray-200 bg-white px-4 py-8 duration-300',
+      'fixed -bottom-full grid w-full justify-items-center gap-y-6 rounded-t-2xl border-t border-gray-200 bg-white px-4 py-8 transition-position duration-300',
       showLogout && '!bottom-0'
     )
   }
@@ -83,7 +83,7 @@ function OptionList() {
         <div className={classes.bottomsheet}>
           <span className='text-xl font-medium text-red-400'>Logout</span>
           <p className='text-base font-medium'>Are you sure you want to log out?</p>
-          <div className='grid gap-2 justify-self-stretch min-[426px]:grid-cols-2'>
+          <div className='grid gap-2 justify-self-stretch min-[426px]:mx-auto min-[426px]:grid-cols-2'>
             <Button onClick={toggleShowLogout} variant='normal'>
               Cancel
             </Button>
